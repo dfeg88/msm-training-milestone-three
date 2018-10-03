@@ -7,6 +7,7 @@ buildscript {
         lombokVersion = '1.18.2'
         jacksonVersion = '2.0.1'
 		mongoJackVersion = '2.9.4'
+        assertJVersion = '3.11.1'
 	}
 	repositories {
 		mavenCentral()
@@ -48,7 +49,7 @@ dependencies {
     testCompile("org.mockito:mockito-junit-jupiter:${mockitoVersion}")
     testCompile("org.mockito:mockito-core:${mockitoVersion}")
     testCompile("org.hamcrest:hamcrest-all:${hamcrestVersion}")
-    testCompile group: 'org.assertj', name: 'assertj-core', version: '3.11.1'
+    testCompile("org.assertj:assertj-core:${assertJVersion}")
 //
 	// Jackson
     compileOnly "com.fasterxml.jackson.core:jackson-databind:${jacksonVersion}"
