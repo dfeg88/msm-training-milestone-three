@@ -19,7 +19,7 @@ public class CurrentTimeController {
         return currentTimeService.getCurrentTimes();
     }
 
-    @Scheduled(fixedRate = 10000)
+    @Scheduled(fixedRate = 180000)
     public void printTimesToConsole() {
         System.out.println("Local Time: " + currentTimeService.getCurrentTimes().getLocalDateTime());
     }
