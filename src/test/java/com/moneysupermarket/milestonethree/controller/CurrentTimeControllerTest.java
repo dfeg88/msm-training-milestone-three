@@ -43,6 +43,7 @@ public class CurrentTimeControllerTest {
         RequestBuilder requestBuilder = MockMvcRequestBuilders
                 .get("/current-times")
                 .accept(MediaType.APPLICATION_JSON);
+
         MvcResult result = mockMvc.perform(requestBuilder).andReturn();
         System.out.println(result.getResponse().getContentAsString());
         assertNotNull(result.getResponse());
