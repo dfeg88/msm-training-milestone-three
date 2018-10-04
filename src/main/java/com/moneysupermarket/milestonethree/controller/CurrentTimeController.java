@@ -18,7 +18,7 @@ public class CurrentTimeController {
         return currentTimeService.getCurrentTimes();
     }
 
-    @Scheduled(fixedRate = 180000)
+    @Scheduled(cron = "0 */3 * ? * *")
     public void printTimesToConsole() {
         System.out.println("Local Time: " + currentTimeService.getCurrentTimes().getLocalTime());
     }
