@@ -15,12 +15,11 @@ public class CurrentTimeController {
 
     @GetMapping("/current-times")
     public CurrentTime getLocalAndCanadianDateTimes() {
-        System.out.println(currentTimeService.getCurrentTimes());
         return currentTimeService.getCurrentTimes();
     }
 
     @Scheduled(fixedRate = 180000)
     public void printTimesToConsole() {
-        System.out.println("Local Time: " + currentTimeService.getCurrentTimes().getLocalDateTime());
+        System.out.println("Local Time: " + currentTimeService.getCurrentTimes().getLocalTime());
     }
 }

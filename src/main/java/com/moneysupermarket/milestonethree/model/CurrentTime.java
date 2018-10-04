@@ -9,6 +9,6 @@ import java.time.LocalTime;
 @AllArgsConstructor
 @Getter
 public class CurrentTime {
-    private LocalTime localDateTime;
-    private LocalTime canadaDateTime;
+    private LocalTime localTime;
+    private LocalTime canadaTime;
 }
