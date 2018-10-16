@@ -40,4 +40,9 @@ public class ProfileController {
 
         return new ResponseEntity<>(profile.get(), HttpStatus.OK);
     }
+
+    @DeleteMapping("profile/{id}")
+    public void delete(@PathVariable String id) {
+        profileRepository.deleteById(id);
+    }
 }
