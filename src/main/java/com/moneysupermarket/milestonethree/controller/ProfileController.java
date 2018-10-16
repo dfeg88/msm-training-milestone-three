@@ -9,6 +9,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
 import java.util.Optional;
 
 @AllArgsConstructor
@@ -39,5 +40,15 @@ public class ProfileController {
         }
 
         return new ResponseEntity<>(profile.get(), HttpStatus.OK);
+    }
+
+    @GetMapping("/profiles")
+    public List<Profile> getAll() {
+        return profileService.getAll();
+    }
+
+    @DeleteMapping("profile/{id}")
+    public void delete(@PathVariable String id) {
+        profileRepository.deleteById(id);
     }
 }
